@@ -10,8 +10,10 @@ const Connection = async (mongourl) => {
       useNewUrlParser: true,
     });
     console.log("Database connected successfully");
+    return "success";
   } catch (error) {
     console.log("Error while connecting with the database", error);
+    return error;
   }
 };
 
