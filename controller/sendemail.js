@@ -5,8 +5,11 @@ import mongoose from "mongoose";
 
 const sendEmail = async (req, res) => {
 
-    const ids=req.body;
+    console.log(req.body);
+    const receiveremail=req.body.mail;
+    const ids=req.body.rowSelectionModel;
     console.log("ids are",ids);
+    console.log(receiveremail);
     // const followedIDs = await ids.map(id => ObjectId(id));
     // console.log("followed ids",followedIDs);
     const records =  await Data.find({ '_id': { $in: ids } });
@@ -55,7 +58,7 @@ const sendEmail = async (req, res) => {
 
   let message = {
     from: process.env.FROMEMAIL,
-    to: process.env.TOMAIL,
+    to: receiveremail,
     subject: "selected canditates",
     html: mail,
   };
