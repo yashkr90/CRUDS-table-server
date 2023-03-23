@@ -23,7 +23,7 @@ const sendEmail = async (req, res) => {
   let config = {
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
+      user: process.env.FROMEMAIL,
       pass: process.env.PASS,
     },
   };
@@ -54,7 +54,7 @@ const sendEmail = async (req, res) => {
   let mail = mailGenerator.generate(response);
 
   let message = {
-    from: process.env.MAIL,
+    from: process.env.FROMEMAIL,
     to: process.env.TOMAIL,
     subject: "selected canditates",
     html: mail,
