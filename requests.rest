@@ -1,0 +1,31 @@
+
+
+
+POST http://localhost:8000/data/new
+Content-Type: application/json
+
+
+{
+    "name":"yasaasah",
+    "phone":564,
+    "email":"kh@fdsjk.co",
+    "hobbies":"gsdsaa33dg"
+}
+
+###
+GET http://localhost:8000/datas
+
+###
+GET http://localhost:8000/data/641ae2fdbfa4e92063d08d8c
+
+###
+GET http://localhost:8000/data/update/641ae309bfa4e92063d08d8e
+
+{
+    "name":"varun",
+    "phone":12345,
+    "email":"qwerty@jkj.c",
+    "hobbies":"qwertyyu"
+}
+###
+DELETE http://localhost:8000/data/delete/641ae309bfa4e92063d08d8e
